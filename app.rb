@@ -14,5 +14,8 @@ get '/name' do
 end
 
 get '/cat' do
-  '<img src="http://bit.ly/1eze8aE" />'
+  '<div class="cat"><img src="http://bit.ly/1eze8aE" /></div>
+  <style contenteditable>
+  .cat { border: 2px dashed red;}
+  </style>'
 end
