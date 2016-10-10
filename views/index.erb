@@ -4,6 +4,8 @@
 <div class="text"><h1>My name is: <%=@name%></h1>
 </div>
 
+<%=erb(:form) if !@name%>
+
 <style>
 .cat { border: 2px dashed red;}
 .text { color: #8d2a4e}

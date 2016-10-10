@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'haml'
 
 get '/' do
   "Hello World!!!"
@@ -13,7 +12,13 @@ get '/name' do
   "Manu"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ['Oscar', 'Viking', 'Amigo'].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params[:name]
+  @name = params[:name]
   erb(:index)
 end
