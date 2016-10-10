@@ -14,8 +14,6 @@ get '/name' do
 end
 
 get '/cat' do
-  '<div class="cat"><img src="http://bit.ly/1eze8aE" /></div>
-  <style contenteditable>
-  .cat { border: 2px dashed red;}
-  </style>'
+  @name = ['Oscar', 'Viking', 'Amigo'].sample
+  erb(:index)
 end
